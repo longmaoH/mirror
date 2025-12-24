@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>TimeZoneConverter</id>
+    <version>3.2.0</version>
+    <authors>Matt Johnson</authors>
+    <owners>Matt Johnson</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/mj1856/TimeZoneConverter</projectUrl>
+    <description>Lightweight library to convert quickly between Windows time zone IDs and IANA Time Zone names.</description>
+    <tags>timezone time zone time zone iana tzdb olson timezoneinfo,rails</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework3.5" />
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework=".NETFramework4.6.1" />
+      <group targetFramework=".NETFramework4.7.1" />
+      <group targetFramework=".NETStandard1.1">
+        <dependency id="System.Collections" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.IO.Compression" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Linq" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Resources.ResourceManager" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.Extensions" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard1.3">
+        <dependency id="System.Collections" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.IO.Compression" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Linq" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Resources.ResourceManager" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.Extensions" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.InteropServices.RuntimeInformation" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+</package>

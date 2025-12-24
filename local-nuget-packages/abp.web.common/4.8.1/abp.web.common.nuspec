@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Abp.Web.Common</id>
+    <version>4.8.1</version>
+    <authors>Abp.Web.Common</authors>
+    <owners>Abp.Web.Common</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE</licenseUrl>
+    <projectUrl>http://www.aspnetboilerplate.com/</projectUrl>
+    <iconUrl>http://www.aspnetboilerplate.com/images/abp_nupkg.png</iconUrl>
+    <description>Abp.Web.Common</description>
+    <tags>asp.net asp.net mvc boilerplate application framework web framework framework domain driven design web</tags>
+    <repository type="git" url="https://github.com/aspnetboilerplate/aspnetboilerplate" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Abp" version="4.8.1" exclude="Build,Analyzers" />
+        <dependency id="NUglify" version="1.5.13" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

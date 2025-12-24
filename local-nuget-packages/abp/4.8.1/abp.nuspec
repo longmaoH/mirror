@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Abp</id>
+    <version>4.8.1</version>
+    <authors>Abp</authors>
+    <owners>Abp</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE</licenseUrl>
+    <projectUrl>http://www.aspnetboilerplate.com/</projectUrl>
+    <iconUrl>http://www.aspnetboilerplate.com/images/abp_nupkg.png</iconUrl>
+    <description>Abp</description>
+    <tags>asp.net asp.net mvc boilerplate application framework web framework framework domain driven design</tags>
+    <repository type="git" url="https://github.com/aspnetboilerplate/aspnetboilerplate" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Castle.Core" version="4.4.0" exclude="Build,Analyzers" />
+        <dependency id="Castle.LoggingFacility" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="JetBrains.Annotations" version="2019.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Caching.Memory" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Options" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.2" exclude="Build,Analyzers" />
+        <dependency id="Nito.AsyncEx.Context" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="Nito.AsyncEx.Coordination" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Collections.Immutable" version="1.5.0" exclude="Build,Analyzers" />
+        <dependency id="System.ComponentModel.Annotations" version="4.5.0" exclude="Build,Analyzers" />
+        <dependency id="System.Configuration.ConfigurationManager" version="4.5.0" exclude="Build,Analyzers" />
+        <dependency id="System.Data.Common" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Linq.Dynamic.Core" version="1.0.16" exclude="Build,Analyzers" />
+        <dependency id="System.Linq.Queryable" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.Serialization.Formatters" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Security.Claims" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Threading" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Xml.XPath.XmlDocument" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="TimeZoneConverter" version="3.2.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

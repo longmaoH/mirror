@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Abp.AspNetCore</id>
+    <version>4.8.1</version>
+    <authors>Abp.AspNetCore</authors>
+    <owners>Abp.AspNetCore</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE</licenseUrl>
+    <projectUrl>http://www.aspnetboilerplate.com/</projectUrl>
+    <iconUrl>http://www.aspnetboilerplate.com/images/abp_nupkg.png</iconUrl>
+    <description>Abp.AspNetCore</description>
+    <tags>asp.net asp.net mvc boilerplate application framework web framework framework domain driven design asp.net core</tags>
+    <repository type="git" url="https://github.com/aspnetboilerplate/aspnetboilerplate" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Abp.Web.Common" version="4.8.1" exclude="Build,Analyzers" />
+        <dependency id="Castle.LoggingFacility.MsLogging" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Castle.Windsor.MsDependencyInjection" version="3.3.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication.Cookies" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.StaticFiles" version="2.2.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>MySql.Data.EntityFrameworkCore.Design</id>
+    <version>8.0.17</version>
+    <authors>Oracle</authors>
+    <owners>Oracle</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://downloads.mysql.com/docs/licenses/connector-net-8.0-gpl-en.pdf</licenseUrl>
+    <projectUrl>https://dev.mysql.com/downloads/</projectUrl>
+    <iconUrl>http://www.mysql.com/common/logos/logo-mysql-170x115.png</iconUrl>
+    <description>Design-time Entity Framework Core Functionality for MySQL Server.</description>
+    <releaseNotes>Review ReleaseNotes.txt for details.</releaseNotes>
+    <copyright>Copyright (c) 2016, 2019, Oracle and/or its affiliates. All rights reserved.</copyright>
+    <tags>Entity Framework Core entity-framework-core EF MySQL</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.2">
+        <dependency id="MySql.Data.EntityFrameworkCore" version="8.0.17" exclude="Build,Analyzers" />
+        <dependency id="MySql.Data" version="8.0.17" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Design" version="1.1.6" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard1.6">
+        <dependency id="MySql.Data.EntityFrameworkCore" version="8.0.17" exclude="Build,Analyzers" />
+        <dependency id="MySql.Data" version="8.0.17" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Design" version="1.1.6" exclude="Build,Analyzers" />
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETFramework4.5.2" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
