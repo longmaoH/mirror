@@ -1,0 +1,64 @@
+name: Jekyll site CI with NuGet Sync
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    # 关键：添加包写入权限
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    # 步骤1: 设置.NET环境
+    - name: Setup .NET Core 2.2
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '2.2.207'
+    
+    # 步骤2: 配置GitHub Packages源
+    - name: Configure NuGet source for GitHub Packages
+      run: |
+        dotnet nuget add source \
+          --username ${{ github.actor }} \
+          --password ${{ secrets.GITHUB_TOKEN }} \
+          --store-password-in-clear-text \
+          --name github \
+          "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
+    
+    # 步骤3: 推送所有本地NuGet包到GitHub Packages
+    - name: Push local NuGet packages to GitHub Packages
+      run: |
+        echo "正在同步NuGet包到GitHub Packages..."
+        
+        # 检查是否存在本地包目录
+        if [ -d "./local-nuget-packages" ]; then
+          # 查找所有.nupkg文件
+          find ./local-nuget-packages -name "*.nupkg" -type f | while read nupkg_file; do
+            echo "推送: $(basename "$nupkg_file")"
+            dotnet nuget push "$nupkg_file" \
+              --source "github" \
+              --skip-duplicate \
+              --no-symbols || echo "跳过重复包或推送失败"
+          done
+          
+          echo "✅ NuGet包同步完成"
+          echo "访问地址: https://github.com/${{ github.repository_owner }}?tab=packages"
+        else
+          echo "⚠️ 未找到local-nuget-packages目录，跳过NuGet同步"
+        fi
+    
+    # 步骤4: 原有的Jekyll构建步骤
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
